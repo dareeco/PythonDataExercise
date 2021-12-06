@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+# Pycharm IDE or any JetBrains related IDEs
+.idea/**
+
+# Visual Studio Code
+.vscode/**
+
+# Local History for Visual Studio Code
+.history/**
