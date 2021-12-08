@@ -1,7 +1,5 @@
-import nltk.tokenize
-
 import re
-from nltk import tokenize
+
 
 
 def parser():
@@ -11,17 +9,17 @@ def parser():
     ycount = len(re.findall(r'\!', data))
     brojRechenici = xcount + ycount
     brojB = len(data)
-    dict={}
+    Rechnik={}
     stats={}
     stats["total_sentences"]=brojRechenici
     stats["total_characters"]=brojB
 
 
     sentences=[sen for sen in re.split('\.|!|\?', data) if len(sen) > 2]
-    dict["sentencs"]=sentences
-    dict["stats"]=stats
+    Rechnik["sentencs"]=sentences
+    Rechnik["stats"]=stats
     #The sentences are split into a list
 
 
 
-    return dict
+    return Rechnik

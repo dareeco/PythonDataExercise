@@ -3,12 +3,14 @@ from PycharmProjects.Praksa2 import parser
 
 
 def main():
-   dict=parser.parser()
-   stats=dict["stats"]
-   print(f'Found total of {stats["total_sentences"]} sentences. With total of {stats["total_characters"]} character in the file....')
+   parse_result=parser.parser()
+   stats=parse_result.__getitem__("stats")
+   total_sentences=stats.get("total_sentences")
+   print(f'Found total of {total_sentences} sentences. With total of {stats["total_characters"]} character in the file....')
+   #It can be done with getting to avoid KeyError Exception
 
 
-   pass
+
 
 if __name__ == '__main__':
    main()
